@@ -19,6 +19,10 @@ const options = {
     timeout: 2000
 };
 
+// element plus
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
 
 const pinia = createPinia();
 
@@ -32,7 +36,7 @@ const app = createApp({});
 pinia.use(({store}) =>{
     store.router = markRaw(router);
 });
-
+app.use(ElementPlus)
 app.use(router);
 app.use(pinia);
 app.use(Toast, options);
